@@ -11,7 +11,7 @@ const Body = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector((store) => store.user);
-  
+
   const fetchUser = async () => {
     if (userData) return;
     try {
@@ -34,7 +34,9 @@ const Body = () => {
   return (
     <>
       <NavBar />
-      <Outlet />
+      <div className="mb-[120px]">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );
